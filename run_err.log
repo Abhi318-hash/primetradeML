@@ -1,0 +1,19 @@
+2026-05-03 15:38:03 | INFO     | ============================================================
+2026-05-03 15:38:03 | INFO     | MLOps Batch Job — STARTED
+2026-05-03 15:38:03 | INFO     | ============================================================
+2026-05-03 15:38:03 | INFO     | Arguments: input=missing.csv, config=config.yaml, output=metrics_err.json, log=run_err.log
+2026-05-03 15:38:03 | INFO     | Loading config from: config.yaml
+2026-05-03 15:38:03 | INFO     | Config loaded — seed=42, window=5, version=v1
+2026-05-03 15:38:03 | INFO     | Random seed set: numpy.random.seed(42)
+2026-05-03 15:38:03 | INFO     | Loading dataset from: missing.csv
+2026-05-03 15:38:03 | ERROR    | PIPELINE FAILED: Input file not found: missing.csv
+Traceback (most recent call last):
+  File "D:\primetradeML\run.py", line 202, in main
+    df = load_dataset(args.input, logger)
+  File "D:\primetradeML\run.py", line 114, in load_dataset
+    raise FileNotFoundError(f"Input file not found: {input_path}")
+FileNotFoundError: Input file not found: missing.csv
+2026-05-03 15:38:03 | INFO     | Writing error metrics...
+2026-05-03 15:38:03 | INFO     | Metrics written to: metrics_err.json
+2026-05-03 15:38:03 | INFO     | MLOps Batch Job — FAILED
+2026-05-03 15:38:03 | INFO     | ============================================================

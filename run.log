@@ -1,0 +1,24 @@
+2026-05-03 15:51:16 | INFO     | ============================================================
+2026-05-03 15:51:16 | INFO     | MLOps Batch Job — STARTED
+2026-05-03 15:51:16 | INFO     | ============================================================
+2026-05-03 15:51:16 | INFO     | Arguments: input=data.csv, config=config.yaml, output=metrics.json, log=run.log
+2026-05-03 15:51:16 | INFO     | Loading config from: config.yaml
+2026-05-03 15:51:16 | INFO     | Config loaded — seed=42, window=5, version=v1
+2026-05-03 15:51:16 | INFO     | Random seed set: numpy.random.seed(42)
+2026-05-03 15:51:16 | INFO     | Loading dataset from: data.csv
+2026-05-03 15:51:16 | INFO     | Dataset loaded — 10000 rows, 5 columns: ['open', 'high', 'low', 'close', 'volume']
+2026-05-03 15:51:16 | INFO     | Computing rolling mean on 'close' with window=5
+2026-05-03 15:51:16 | DEBUG    | Rolling mean computed — 4 NaN rows (first window-1=4 rows, excluded from signal)
+2026-05-03 15:51:16 | INFO     | Generating binary signal: 1 if close > rolling_mean, else 0
+2026-05-03 15:51:16 | INFO     | Signal generated — 9996 valid rows, 5036 signal=1, 4960 signal=0
+2026-05-03 15:51:16 | INFO     | ------------------------------------------------------------
+2026-05-03 15:51:16 | INFO     | METRICS SUMMARY
+2026-05-03 15:51:16 | INFO     |   rows_processed : 10000
+2026-05-03 15:51:16 | INFO     |   signal_rate    : 0.5038
+2026-05-03 15:51:16 | INFO     |   latency_ms     : 38
+2026-05-03 15:51:16 | INFO     |   version        : v1
+2026-05-03 15:51:16 | INFO     |   seed           : 42
+2026-05-03 15:51:16 | INFO     | ------------------------------------------------------------
+2026-05-03 15:51:16 | INFO     | Metrics written to: metrics.json
+2026-05-03 15:51:16 | INFO     | MLOps Batch Job — COMPLETED SUCCESSFULLY
+2026-05-03 15:51:16 | INFO     | ============================================================
